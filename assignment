@@ -1,0 +1,141 @@
+#checking a number is perfect number or not
+print("enter a number: ")
+a = int(input())
+sum = 0
+for i in range(1,a) :
+    if (a%i == 0) :
+        sum = sum + i
+if (a == sum) :
+    print(str(a)+" is a perfect number")
+else :
+    print(str(a)+" is not a perfect number")
+
+Output:
+enter a number: 
+6
+6 is a perfect number
+
+#sum of a number and checking armstrong or not
+print("enter a number: ")
+a = int(input())
+b = a
+sum = 0
+add = 0
+while(a>0) :
+    x = a%10
+    add = add + x ** 3
+    sum = int(sum + x)
+    a = int(a/10)
+print("sum of the digits "+str(b)+ " is ",sum)
+if b == add :
+    print(str(b)+" is a armstrong number")
+else :
+    print(str(b)+" is  not a armstrong number")
+
+Output:
+
+enter a number: 
+153
+sum of the digits 153 is  9
+153 is a armstrong number
+
+#twin primes upto certain limit
+print("enter the lower and upper limit : ")
+a = int(input())
+b = int(input())
+print("twin primes are : ")
+def prime(n):
+    for i in range(2,n):
+        if n%i == 0 :
+            return False
+    else :
+        return True
+def twin(x,y):
+    for i in range(x,y):
+        if i>1:
+            k = i+2
+            if prime(i) and prime(k):
+                print(str(i)+" and "+str(k))
+twin(a,b)
+
+Output:
+
+enter the lower and upper limit : 
+1
+10
+twin primes are : 
+3 and 5
+5 and 7
+
+#swapping of two numbers
+print("enter two numbers: ")
+a = int(input())
+b = int(input())
+#before swapping
+print("before swapping")
+print("number1: ",a)
+print("number2: ",b)
+x = a
+a = b
+b = x
+#after swapping
+print("after swapping")
+print("number1: ",a)
+print("number2: ",b)
+
+Output:
+
+enter two numbers: 
+2
+6
+before swapping
+number1:  2
+number2:  6
+after swapping
+number1:  6
+number2:  2
+
+#prime numbers upto a specified limt
+print("enter the lower limit & upper limit ")
+a = int(input())
+b = int(input())
+print("prime numbers are:")
+for n in range(a,b+1) :
+    if n>1 :
+        for i in range(2,n):
+            if n%i == 0 :
+                break
+        else :
+                print("",n)
+
+Output:
+
+enter the lower limit & upper limit 
+1
+10
+prime numbers are:
+ 2
+ 3
+ 5
+ 7
+ 
+ #five arithmetic operations
+print("enter two numbers: ")
+a = int(input())
+b = int(input())
+print("a+b = ",(a+b))
+print("a-b = ",(a-b))
+print("a/b = ",(a/b))
+print("a*b = ", (a*b))
+print("a%b = ",(a%b))
+
+output:
+
+enter two numbers: 
+4
+2
+a+b =  6
+a-b =  2
+a/b =  2.0
+a*b =  8
+a%b =  0
